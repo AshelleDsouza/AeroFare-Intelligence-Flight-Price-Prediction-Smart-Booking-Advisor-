@@ -1,0 +1,88 @@
+{
+    "best_model": "Random Forest Regressor",
+    "dataset_source": "AeroFare Dataset (flight_price_dataset.csv)",
+    "total_records": 6000,
+    "benchmark_metrics": {
+        "Linear Regression (Baseline)": {
+            "r2_score": 0.9619,
+            "mae": 2337.61,
+            "rmse": 3549.77,
+            "mape": 18.09
+        },
+        "Ridge Regression (Alpha=1.0)": {
+            "r2_score": 0.9619,
+            "mae": 2337.32,
+            "rmse": 3549.82,
+            "mape": 18.08
+        },
+        "Decision Tree Regressor": {
+            "r2_score": 0.9902,
+            "mae": 1092.24,
+            "rmse": 1799.04,
+            "mape": 6.85
+        },
+        "Random Forest Regressor": {
+            "r2_score": 0.9947,
+            "mae": 872.36,
+            "rmse": 1326.96,
+            "mape": 5.86
+        }
+    },
+    "feature_importances": [
+        {
+            "feature": "class_Business",
+            "importance": 0.4576095572101819
+        },
+        {
+            "feature": "class_Economy",
+            "importance": 0.4394994122996673
+        },
+        {
+            "feature": "days_left",
+            "importance": 0.05052191308625017
+        },
+        {
+            "feature": "duration",
+            "importance": 0.044974079536483164
+        },
+        {
+            "feature": "airline_Vistara",
+            "importance": 0.0020149342151489997
+        },
+        {
+            "feature": "airline_Air India",
+            "importance": 0.0016103179848496502
+        },
+        {
+            "feature": "stops_one",
+            "importance": 0.0006081129835089398
+        },
+        {
+            "feature": "stops_zero",
+            "importance": 0.00045621675555345277
+        },
+        {
+            "feature": "stops_two_or_more",
+            "importance": 0.00016448077678464588
+        },
+        {
+            "feature": "arrival_time_Evening",
+            "importance": 0.00013901389504098515
+        }
+    ],
+    "features": {
+        "categorical": [
+            "airline",
+            "source_city",
+            "departure_time",
+            "stops",
+            "arrival_time",
+            "destination_city",
+            "class"
+        ],
+        "numerical": [
+            "duration",
+            "days_left"
+        ]
+    }
+}
